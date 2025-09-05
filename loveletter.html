@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Baby ❤️</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      color: #e63946;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin: 40px 0 20px;
+      font-size: 2em;
+      color: #6a0572;
+    }
+
+    /* Card container (Letter, etc.) */
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      max-width: 750px;
+      margin: 20px auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      line-height: 1.6;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Grid layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    /* Reason Cards */
+    .reason-card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .reason-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .reason-card p {
+      font-size: 1em;
+      color: #444;
+    }
+
+    /* Song Cards */
+    .song-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .song-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .song-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .song-info {
+      padding: 15px;
+    }
+
+    .song-info h3 {
+      font-size: 1.1em;
+      margin: 0;
+      color: #6a0572;
+    }
+
+    .song-info p {
+      margin: 5px 0 10px;
+      color: #555;
+      font-size: 0.9em;
+    }
+
+    .song-info a {
+      display: inline-block;
+      padding: 8px 15px;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .song-info a:hover {
+      background: linear-gradient(135deg, #fad0c4, #ff9a9e);
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: #e63946;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .timeline-item {
+      padding: 20px 40px;
+      position: relative;
+      width: 50%;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border: 4px solid #e63946;
+      top: 30px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .content {
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .content:hover {
+      transform: scale(1.03);
+    }
+
+    .timeline-item.left { left: 0; }
+    .timeline-item.right { left: 50%; }
+
+    .timeline-item.left::before { right: -10px; }
+    .timeline-item.right::before { left: -10px; }
+
+    @media screen and (max-width: 768px) {
+      .timeline::after { left: 20px; }
+      .timeline-item { width: 100%; padding-left: 60px; padding-right: 25px; }
+      .timeline-item.right { left: 0; }
+      .timeline-item::before { left: 15px; }
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 24px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0) scale(1); opacity: 0.7; }
+      to { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mera Pyaara Banda 💕</h1>
+
+  <!-- Letter -->
+  <div class="card">
+    <p>Hii baby,</p>
+    <p>I made this little pyaari website just for you.  
+       You mean the world to me, and I wanted something beautiful, simple, and full of us. 💌</p>
+    <p>Every song, every word here is a piece of how much I love you.  
+       Thank you for making my life so much brighter. ✨</p>
+    <p>Forever yours,<br> Your Wifey</p>
+  </div>
+
+  <!-- Reasons I Love You -->
+  <h2>💌 Reasons Why I Love You 💌</h2>
+  <div class="grid">
+    <div class="reason-card"><p>How you make me laugh even when I don’t feel like smiling.</p></div>
+    <div class="reason-card"><p>The way you care about little details.</p></div>
+    <div class="reason-card"><p>Your smile is literally my favorite thing.</p></div>
+    <div class="reason-card"><p>The way you listen to me and truly understand makes me feel so loved.</p></div>
+    <div class="reason-card"><p>You make me laugh until my cheeks hurt, and I love that.</p></div>
+    <div class="reason-card"><p>With you, I know what forever feels like.</p></div>
+  </div>
+
+  <!-- Timeline of Us -->
+  <h2>Since Day 1</h2>
+  <div class="timeline">
+
+    <div class="timeline-item left">
+      <div class="content">
+        <h3>✨ 19 March 2023</h3>
+        <p>The day we talked💖</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="content">
+        <h3>💌 20 June 2023</h3>
+        <p>The day we officially became “us.” 💕</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="content">
+        <h3>🍦 10 July 2023</h3>
+        <p>Our first date🥰</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="content">
+        <h3>🎉 20 June 2024</h3>
+        <p>Our first anniversary🌸</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="content">
+        <h3>💖 20 June 2025</h3>
+        <p>Our second anniversary✨</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="content">
+        <h3>🌍 Future Together</h3>
+        <p>Forever and always. ❤️</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Songs Playlist -->
+  <h2>Yours Forever💌</h2>
+  <div class="grid">
+
+    <div class="song-card">
+      <img src="https://i.scdn.co/image/ab67616d0000b273f50e3f017fe5d1e52a6a7b39" alt="For A Reason">
+      <div class="song-info">
+        <h3>For A Reason</h3>
+        <p>Karan Aujla</p>
+        <a href="https://open.spotify.com/track/0cYohCh24y1aMjJmcS9RBl" target="_blank">▶ Play</a>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <img src="https://i.scdn.co/image/ab67616d0000b273bb21f9a74c1bda1ff96db5c6" alt="Video Games">
+      <div class="song-info">
+        <h3>Video Games</h3>
+        <p>Lana Del Ray</p>
+        <a href="https://open.spotify.com/track/0fBSs3fRoh1yJcne77fdu9" target="_blank">▶ Play</a>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <img src="https://i.scdn.co/image/ab67616d0000b2733dff9c416f2d1c46a2e92f87" alt="Always Forever">
+      <div class="song-info">
+        <h3>Always Forever</h3>
+        <p>Cults</p>
+        <a href="https://open.spotify.com/track/2enPRFda84VE2wtI8c86Uf" target="_blank">▶ Play</a>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <img src="https://i.scdn.co/image/ab67616d0000b2735195d07212e87317e6e30a14" alt="Open Arms">
+      <div class="song-info">
+        <h3>Open Arms</h3>
+        <p>SZA</p>
+        <a href="https://open.spotify.com/track/0xaFw2zDYf1rIJWl2dXiSF" target="_blank">▶ Play</a>
+      </div>
+    </div>
+
+
+</body>
+</html>
